@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact &middot; Hargrove Family Association</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="lockup" href="index.html">
+      <span class="lockup__mark" aria-hidden="true">H</span>
+      <span class="lockup__text">
+        <span class="lockup__name">The Hargrove Family Association</span>
+        <span class="lockup__est">Est. 1978 &middot; Baltimore, Maryland</span>
+      </span>
+    </a>
+  </div>
+  <nav class="nav" aria-label="Main">
+    <ul class="wrap nav__list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="meetings.html">Meetings</a></li>
+      <li><a href="dues.html">Dues</a></li>
+      <li><a href="reunion.html">Reunion &amp; T-Shirts</a></li>
+      <li><a href="announcements.html">Announcements</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Reach somebody.</h1>
+      <p class="lede">General questions go to the first address below and somebody answers within a few days. For anything specific, go straight to the officer who handles it.</p>
+      <dl class="deflist" style="margin-top:2rem">
+        <div><dt>Anything at all</dt><dd><a href="mailto:hello@hargrovefamily.example">hello@hargrovefamily.example</a><span>Read by the President and the Secretary</span></dd></div>
+        <div><dt>Dues &amp; money</dt><dd><a href="mailto:treasurer@hargrovefamily.example">treasurer@hargrovefamily.example</a><span>Rev. Clara Hargrove Boyd, Treasurer</span></dd></div>
+        <div><dt>Meetings &amp; minutes</dt><dd><a href="mailto:secretary@hargrovefamily.example">secretary@hargrovefamily.example</a><span>Dana Hargrove, Recording Secretary</span></dd></div>
+        <div><dt>Reunion &amp; shirts</dt><dd><a href="mailto:reunion@hargrovefamily.example">reunion@hargrovefamily.example</a><span>2027 planning committee</span></dd></div>
+        <div><dt>History &amp; photos</dt><dd><a href="mailto:historian@hargrovefamily.example">historian@hargrovefamily.example</a><span>Twyla Pratt, Historian &mdash; corrections to the family tree welcome</span></dd></div>
+        <div><dt>A card or a call</dt><dd>Sunshine Committee<span>Tell Aunt Clara Mae about a hospital stay, a loss or a graduation and she will handle it</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section--tint">
+    <div class="wrap">
+      <div class="grid-2">
+        <div>
+          <p class="eyebrow">Write to us</p>
+          <h2>Send a message</h2>
+          <form class="form" method="post" action="#">
+            <div class="field">
+              <label for="c-name">Your name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="c-line">Which line are you from?</label>
+              <select id="c-line" name="line">
+                <option value="">Not sure</option>
+                <option>Ruth</option>
+                <option>Eli Jr.</option>
+                <option>Naomi</option>
+                <option>Corinne</option>
+                <option>Samuel</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" required></textarea>
+            </div>
+            <div><button class="btn btn--brass" type="submit">Send message</button></div>
+          </form>
+          <details class="setup">
+            <summary>Setup note &mdash; making this form actually send</summary>
+            <p>A form on a plain website has nowhere to deliver mail on its own. Either point the <code>action</code> at a form service, or drop the form and let people use the email addresses above &mdash; which most family members will do anyway.</p>
+          </details>
+        </div>
+        <div>
+          <div class="panel">
+            <p class="label">By mail</p>
+            <h3>Checks and paperwork</h3>
+            <p>The Hargrove Family Association<br>P.O. Box 4412<br>Baltimore, MD 21211</p>
+            <p class="note">Make checks payable to <em>The Hargrove Family Association</em> &mdash; not to an officer by name. Write your line and what it is for in the memo.</p>
+          </div>
+          <div class="rail" style="margin-top:1.5rem">
+            <p class="label">Moved? Changed your number?</p>
+            <p>Tell the Secretary. Half the work of a family association is keeping the roll current, and a returned envelope is how people quietly fall off it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <p class="footer__name">The Hargrove Family Association</p>
+      <p>P.O. Box 4412<br>Baltimore, MD 21211</p>
+      <p><a href="mailto:hello@hargrovefamily.example">hello@hargrovefamily.example</a></p>
+    </div>
+    <div>
+      <p class="label">Members</p>
+      <p><a href="dues.html">Pay dues</a></p>
+      <p><a href="meetings.html">Meeting calendar</a></p>
+      <p><a href="about.html">Bylaws</a></p>
+    </div>
+    <div>
+      <p class="label">Keep up</p>
+      <p><a href="#">Private Facebook group</a></p>
+      <p><a href="#">Instagram</a></p>
+      <p><a href="announcements.html">Submit an announcement</a></p>
+    </div>
+    <p class="footer__note">&copy; 2026 The Hargrove Family Association. <span>Demo build &mdash; every name, date, address and link on this site is a placeholder.</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
