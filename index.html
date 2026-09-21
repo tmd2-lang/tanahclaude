@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hargrove Family Association</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Caslon+Display&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,13 +12,9 @@
 
 <header class="masthead">
   <div class="wrap masthead__inner">
-    <a class="lockup" href="index.html">
-      <span class="lockup__mark" aria-hidden="true">H</span>
-      <span class="lockup__text">
-        <span class="lockup__name">The Hargrove Family Association</span>
-        <span class="lockup__est">Est. 1978 &middot; Baltimore, Maryland</span>
-      </span>
-    </a>
+    <a class="masthead__name" href="index.html">The Hargrove Family Association</a>
+    <p class="ornament" aria-hidden="true"><span>&#9670;</span></p>
+    <p class="masthead__est">Organized 1978 &middot; Baltimore, Maryland</p>
   </div>
   <nav class="nav" aria-label="Main">
     <ul class="wrap nav__list">
@@ -37,67 +33,75 @@
 
   <div class="wrap">
     <section class="hero">
-      <div>
-        <p class="eyebrow">Welcome home</p>
-        <h1>Five lines, six generations, one family.</h1>
-        <p class="lede">The Hargrove Family Association has gathered the descendants of Eli and Mattie Hargrove every summer since 1978 &mdash; and kept everybody in touch the rest of the year. Whether this will be your thirtieth reunion or your first, you belong here.</p>
-        <div class="btn-row">
-          <a class="btn btn--brass" href="dues.html">Pay your dues</a>
-          <a class="btn btn--ghost" href="reunion.html">2027 reunion details</a>
-        </div>
+      <p class="eyebrow">Welcome home</p>
+      <h1>Five lines, six generations,<br>one family.</h1>
+      <p class="lede">The Hargrove Family Association has gathered the descendants of Eli and Mattie Hargrove every summer since 1978 &mdash; and kept everybody in touch the rest of the year. Whether this will be your thirtieth reunion or your first, you belong here.</p>
+      <div class="btn-row">
+        <a class="btn btn--brass" href="dues.html">Pay your dues</a>
+        <a class="btn btn--ghost" href="reunion.html">2027 reunion details</a>
       </div>
       <figure class="frame">
-        <svg viewBox="0 0 360 210" role="img" aria-label="Decorative quilt-block pattern, standing in for a reunion photograph">
+        <svg viewBox="0 0 360 180" role="img" aria-label="Decorative quilt-block pattern, standing in for a reunion photograph">
           <defs>
             <pattern id="ninepatch" width="60" height="60" patternUnits="userSpaceOnUse">
-              <rect width="60" height="60" fill="#4E2A47"></rect>
-              <path d="M30 5 55 30 30 55 5 30Z" fill="#C9973F"></path>
-              <path d="M30 17 43 30 30 43 17 30Z" fill="#37192F"></path>
-              <circle cx="5" cy="5" r="3.2" fill="#5E7059"></circle>
-              <circle cx="55" cy="5" r="3.2" fill="#5E7059"></circle>
-              <circle cx="5" cy="55" r="3.2" fill="#5E7059"></circle>
-              <circle cx="55" cy="55" r="3.2" fill="#5E7059"></circle>
+              <rect width="60" height="60" fill="#EFE8D8"></rect>
+              <path d="M30 6 54 30 30 54 6 30Z" fill="none" stroke="#76292B" stroke-width="1.4"></path>
+              <path d="M30 18 42 30 30 42 18 30Z" fill="#A88B4E"></path>
+              <circle cx="0" cy="0" r="2.4" fill="#76292B"></circle>
+              <circle cx="60" cy="0" r="2.4" fill="#76292B"></circle>
+              <circle cx="0" cy="60" r="2.4" fill="#76292B"></circle>
+              <circle cx="60" cy="60" r="2.4" fill="#76292B"></circle>
             </pattern>
           </defs>
-          <rect width="360" height="210" fill="url(#ninepatch)"></rect>
+          <rect width="360" height="180" fill="url(#ninepatch)"></rect>
         </svg>
-        <figcaption>Swap this block for a wide photo from last year&rsquo;s banquet &mdash; landscape, roughly 1600&nbsp;&times;&nbsp;900.</figcaption>
+        <figcaption>Swap this block for a wide photograph from last year&rsquo;s banquet.</figcaption>
       </figure>
     </section>
   </div>
 
   <div class="strip">
     <div class="wrap strip__inner">
-      <span class="strip__label">Next reunion</span>
+      <span class="strip__label">The forty-ninth annual reunion</span>
       <span class="strip__where">July 16&ndash;18, 2027 &middot; Baltimore, Maryland</span>
-      <span class="strip__count" id="countdown"><strong>&mdash;</strong> days to go</span>
+      <span class="strip__count" id="countdown">&mdash;</span>
     </div>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">Everything in one glance</p>
-      <h2>Start here</h2>
-      <ul class="quicklinks">
-        <li><a class="ql ql--primary" href="dues.html">
-          <span class="ql__label">Members</span>
-          <span class="ql__title">Pay dues</span>
-          <span class="ql__meta">$40 a year, or $5 a month</span>
+      <p class="eyebrow">Where to go</p>
+      <h2>At a glance</h2>
+      <ul class="leaders">
+        <li><a href="dues.html">
+          <span class="leaders__label">Annual dues</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">$40, or $5 monthly</span>
         </a></li>
-        <li><a class="ql" href="reunion.html#tshirts">
-          <span class="ql__label">Summer 2027</span>
-          <span class="ql__title">Order t&#8209;shirts</span>
-          <span class="ql__meta">Orders close June&nbsp;18</span>
+        <li><a href="meetings.html">
+          <span class="leaders__label">Next meeting</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">Sunday, Oct 11</span>
         </a></li>
-        <li><a class="ql" href="meetings.html">
-          <span class="ql__label">Next meeting</span>
-          <span class="ql__title">Sun, Oct&nbsp;11</span>
-          <span class="ql__meta">7:00&nbsp;PM ET on Zoom</span>
+        <li><a href="reunion.html#tshirts">
+          <span class="leaders__label">Reunion t&#8209;shirts</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">Order by June 18</span>
         </a></li>
-        <li><a class="ql" href="announcements.html">
-          <span class="ql__label">Family news</span>
-          <span class="ql__title">Announcements</span>
-          <span class="ql__meta">Birthdays, milestones, memorials</span>
+        <li><a href="reunion.html">
+          <span class="leaders__label">Registration</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">$65 adults</span>
+        </a></li>
+        <li><a href="announcements.html">
+          <span class="leaders__label">Family news</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">Announcements</span>
+        </a></li>
+        <li><a href="about.html">
+          <span class="leaders__label">Officers &amp; bylaws</span>
+          <span class="leaders__dots"></span>
+          <span class="leaders__value">About us</span>
         </a></li>
       </ul>
     </div>
@@ -111,36 +115,30 @@
         <li class="post">
           <div class="post__aside">
             <span class="chip chip--milestone">Milestone</span>
-            <span class="post__date">Sept 14</span>
+            <span class="post__date">September 14</span>
           </div>
-          <div>
-            <h3>Denise Hargrove-Bell passed the Maryland bar</h3>
-            <p>Sworn in at the Court of Appeals in Annapolis, with nine cousins in the gallery. She is the third lawyer out of the Ruth line.</p>
-          </div>
+          <h3>Denise Hargrove-Bell passed the Maryland bar</h3>
+          <p>Sworn in at the Court of Appeals in Annapolis, with nine cousins in the gallery. She is the third lawyer out of the Ruth line.</p>
         </li>
         <li class="post">
           <div class="post__aside">
             <span class="chip chip--celebration">Celebration</span>
-            <span class="post__date">Sept 6</span>
+            <span class="post__date">September 6</span>
           </div>
-          <div>
-            <h3>September birthdays</h3>
-            <ul>
-              <li>Aunt Clara &mdash; the 3rd</li>
-              <li>Marcus Hargrove Jr. &mdash; the 12th</li>
-              <li>Twyla Pratt &mdash; the 22nd</li>
-            </ul>
-          </div>
+          <h3>September birthdays</h3>
+          <ul>
+            <li>Aunt Clara &mdash; the 3rd</li>
+            <li>Marcus Hargrove Jr. &mdash; the 12th</li>
+            <li>Twyla Pratt &mdash; the 22nd</li>
+          </ul>
         </li>
         <li class="post">
           <div class="post__aside">
-            <span class="chip chip--news">News</span>
-            <span class="post__date">Aug 30</span>
+            <span class="chip chip--news">Notice</span>
+            <span class="post__date">August 30</span>
           </div>
-          <div>
-            <h3>Scholarship fund cleared $6,000</h3>
-            <p>Two awards go out next spring to graduating seniors in the family. Applications open in February; the Historian is collecting them.</p>
-          </div>
+          <h3>Scholarship fund cleared $6,000</h3>
+          <p>Two awards go out next spring to graduating seniors in the family. Applications open in February; the Historian is collecting them.</p>
         </li>
       </ul>
       <div class="btn-row">
@@ -180,7 +178,7 @@
   if (!el) { return; }
   var days = Math.ceil((new Date("2027-07-16T09:00:00-04:00") - new Date()) / 86400000);
   if (days > 1) {
-    el.innerHTML = "<strong>" + days + "</strong> days to go";
+    el.innerHTML = "<strong>" + days + "</strong> days hence";
   } else if (days >= 0) {
     el.textContent = "Happening now — see you there";
   } else {

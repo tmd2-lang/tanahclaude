@@ -1,6 +1,7 @@
 # Family Association Website
 
-A seven-page static website built from Tanah's brief. Plain HTML and one stylesheet —
+A seven-page static website built from Tanah's brief, set like a printed church
+program. Plain HTML and one stylesheet —
 no build step, no framework, no dependencies. Open `index.html` in a browser to view it.
 
 ## Files
