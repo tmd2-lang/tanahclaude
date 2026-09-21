@@ -1,5 +1,7 @@
 # Family Association Website
 
+> The existing Claude version remains at the repository root. The separate Codex-built concept is in [`codex-version/`](codex-version/); see [`CODEX_VERSION.md`](CODEX_VERSION.md) for the preview instructions.
+
 A seven-page static website built from Tanah's brief, set like a printed church
 program. Plain HTML and one stylesheet —
 no build step, no framework, no dependencies. Open `index.html` in a browser to view it.
