@@ -12,7 +12,9 @@ export default function useReveal(ref) {
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el || typeof IntersectionObserver === "undefined") return undefined;
-    if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return undefined;
+    // Anything with any part on screen stays visible; only content that
+    // starts entirely below the fold is held back for the animation.
+    if (el.getBoundingClientRect().top < window.innerHeight) return undefined;
 
     el.classList.add("pending");
     const io = new IntersectionObserver(

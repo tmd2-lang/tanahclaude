@@ -12,6 +12,6 @@ export function countdownLabel(days) {
   return "Until next time";
 }
 
-export default function Countdown({ target = REUNION_START }) {
-  return <p className="notice__count">{countdownLabel(daysUntil(target))}</p>;
+export default function Countdown({ target = REUNION_START, as: Tag = "p", className = "notice__count" }) {
+  return <Tag className={className}>{countdownLabel(daysUntil(target))}</Tag>;
 }

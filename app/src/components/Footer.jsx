@@ -1,3 +1,5 @@
+import SmartLink from "./SmartLink.jsx";
+
 export default function Footer({ footer }) {
   return (
     <footer className="footer">
@@ -9,7 +11,7 @@ export default function Footer({ footer }) {
         {footer.columns.map((column, i) => (
           <div className="footer__col" key={i}>
             {column.map((link) => (
-              <a key={link.label} href={link.href}>{link.label}</a>
+              <SmartLink key={link.label} href={link.href}>{link.label}</SmartLink>
             ))}
           </div>
         ))}

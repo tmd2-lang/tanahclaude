@@ -1,14 +1,13 @@
 # Family Association Website
 
-A seven-page static website built from Tanah's brief, set like a printed church
-program. Plain HTML and one stylesheet —
-no build step, no framework, no dependencies. Open `index.html` in a browser to view it.
+A seven-page website built from Tanah's brief, as a Vite and React app. The
+build output is plain static files, so it runs on any static host.
 
-## Two builds live here
+## The site lives in `app/`
 
-`app/` is the React version and is where active work happens. The seven
-`.html` files at the root are the original static build, kept until the
-redesign is settled across every page.
+`app/` is the React version of all seven pages and is where work happens.
+The `.html` files at the repository root are the original static build.
+They are no longer maintained and can be deleted.
 
 ```sh
 cd app
@@ -17,10 +16,19 @@ npm run dev      # http://localhost:5173
 npm run build    # writes app/dist
 ```
 
-Only the home page has been ported to React so far. The other six are
-still served by the static files at the root.
+- `src/data/` holds every word on the site: `site.js` for the name, nav
+  and footer, and one file per page. Wording changes never touch JSX.
+- `src/pages/` has one component per route; `src/components/` holds the
+  shared pieces they're assembled from.
+- Routing is hash-based (`/#/about`), so the build runs on any static
+  host, including from a subdirectory, with no server configuration.
+  For clean URLs on a host that can rewrite every path to `index.html`,
+  swap `HashRouter` for `BrowserRouter` in `src/main.jsx`.
+- A link whose `href` is `null` in the data renders as an inert,
+  disabled link. That marks everything the client still has to supply:
+  Cheddar Up, Zoom, the calendar, the PDFs.
 
-## Files
+## Legacy static files (repository root)
 
 | File | Page |
 | --- | --- |

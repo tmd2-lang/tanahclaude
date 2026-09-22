@@ -1,13 +1,16 @@
+import { Link, NavLink } from "react-router-dom";
+
 export default function Masthead({ name, nav }) {
   return (
     <header className="masthead">
       <div className="wrap masthead__inner">
-        <a className="masthead__name" href="index.html">{name}</a>
+        <Link className="masthead__name" to="/">{name}</Link>
         <nav className="nav" aria-label="Main">
           {nav.map((item) => (
-            <a key={item.label} href={item.href} aria-current={item.current ? "page" : undefined}>
+            // NavLink sets aria-current="page" on the active route, which the CSS keys off.
+            <NavLink key={item.label} to={item.href} end={item.href === "/"}>
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
       </div>

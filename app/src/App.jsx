@@ -1,25 +1,27 @@
-import site from "./data/site.js";
-import Masthead from "./components/Masthead.jsx";
-import Hero from "./components/Hero.jsx";
-import Plate from "./components/Plate.jsx";
-import ReunionNotice from "./components/ReunionNotice.jsx";
-import Trio from "./components/Trio.jsx";
-import Closing from "./components/Closing.jsx";
-import Footer from "./components/Footer.jsx";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Meetings from "./pages/Meetings.jsx";
+import Dues from "./pages/Dues.jsx";
+import Reunion from "./pages/Reunion.jsx";
+import News from "./pages/News.jsx";
+import Contact from "./pages/Contact.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
   return (
-    <>
-      <a className="skip" href="#main">Skip to content</a>
-      <Masthead name={site.name} nav={site.nav} />
-      <main id="main">
-        <Hero established={site.established} hero={site.hero} />
-        <Plate alt={site.plateAlt} />
-        <ReunionNotice reunion={site.reunion} />
-        <Trio heading={site.trioHeading} items={site.trio} />
-        <Closing closing={site.closing} />
-      </main>
-      <Footer footer={site.footer} />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="meetings" element={<Meetings />} />
+        <Route path="dues" element={<Dues />} />
+        <Route path="reunion" element={<Reunion />} />
+        <Route path="news" element={<News />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
