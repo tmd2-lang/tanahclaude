@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hargrove Family Association</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Caslon+Display&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..600;1,6..72,300..400&display=swap">
+<link rel="stylesheet" href="redesign.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -13,136 +13,74 @@
 <header class="masthead">
   <div class="wrap masthead__inner">
     <a class="masthead__name" href="index.html">The Hargrove Family Association</a>
-    <p class="ornament" aria-hidden="true"><span>&#9670;</span></p>
-    <p class="masthead__est">Organized 1978 &middot; Baltimore, Maryland</p>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="meetings.html">Meetings</a>
+      <a href="dues.html">Dues</a>
+      <a href="reunion.html">Reunion</a>
+      <a href="announcements.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-  <nav class="nav" aria-label="Main">
-    <ul class="wrap nav__list">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="meetings.html">Meetings</a></li>
-      <li><a href="dues.html">Dues</a></li>
-      <li><a href="reunion.html">Reunion &amp; T-Shirts</a></li>
-      <li><a href="announcements.html">Announcements</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main id="main">
 
-  <div class="wrap">
-    <section class="hero">
-      <p class="eyebrow">Welcome home</p>
-      <h1>Five lines, six generations,<br>one family.</h1>
-      <p class="lede">The Hargrove Family Association has gathered the descendants of Eli and Mattie Hargrove every summer since 1978 &mdash; and kept everybody in touch the rest of the year. Whether this will be your thirtieth reunion or your first, you belong here.</p>
-      <div class="btn-row">
-        <a class="btn btn--brass" href="dues.html">Pay your dues</a>
-        <a class="btn btn--ghost" href="reunion.html">2027 reunion details</a>
+  <section class="hero">
+    <div class="wrap">
+      <p class="label reveal">Est. 1978 &middot; Baltimore, Maryland</p>
+      <h1 class="reveal">We have never missed a July.</h1>
+      <p class="hero__sub reveal">Forty-eight summers. Eleven cities. Five lines of one family that decided, in a church basement, to stay one.</p>
+      <div class="actions reveal">
+        <a class="action" href="reunion.html">The 2027 Reunion</a>
+        <a class="action" href="dues.html">Pay Dues</a>
       </div>
-      <figure class="frame">
-        <svg viewBox="0 0 360 180" role="img" aria-label="Decorative quilt-block pattern, standing in for a reunion photograph">
-          <defs>
-            <pattern id="ninepatch" width="60" height="60" patternUnits="userSpaceOnUse">
-              <rect width="60" height="60" fill="#EFE8D8"></rect>
-              <path d="M30 6 54 30 30 54 6 30Z" fill="none" stroke="#76292B" stroke-width="1.4"></path>
-              <path d="M30 18 42 30 30 42 18 30Z" fill="#A88B4E"></path>
-              <circle cx="0" cy="0" r="2.4" fill="#76292B"></circle>
-              <circle cx="60" cy="0" r="2.4" fill="#76292B"></circle>
-              <circle cx="0" cy="60" r="2.4" fill="#76292B"></circle>
-              <circle cx="60" cy="60" r="2.4" fill="#76292B"></circle>
-            </pattern>
-          </defs>
-          <rect width="360" height="180" fill="url(#ninepatch)"></rect>
-        </svg>
-        <figcaption>Swap this block for a wide photograph from last year&rsquo;s banquet.</figcaption>
-      </figure>
-    </section>
-  </div>
-
-  <div class="strip">
-    <div class="wrap strip__inner">
-      <span class="strip__label">The forty-ninth annual reunion</span>
-      <span class="strip__where">July 16&ndash;18, 2027 &middot; Baltimore, Maryland</span>
-      <span class="strip__count" id="countdown">&mdash;</span>
     </div>
+  </section>
+
+  <div class="wrap">
+    <div class="plate reveal" role="img" aria-label="Photograph slot: a wide image from a past reunion"></div>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">Where to go</p>
-      <h2>At a glance</h2>
-      <ul class="leaders">
-        <li><a href="dues.html">
-          <span class="leaders__label">Annual dues</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">$40, or $5 monthly</span>
+      <div class="section__head reveal">
+        <h2>The Hargrove Family.</h2>
+      </div>
+      <ul class="trio">
+        <li><a class="item reveal" href="reunion.html">
+          <span class="item__slot"></span>
+          <span class="item__rule"></span>
+          <span class="label item__label">The Reunion</span>
+          <h3>Three Days Together. Every July.</h3>
+          <span class="item__note">Charleston in 2024, Baltimore in 2027. Friday fish fry, Saturday banquet, Sunday in the park.</span>
         </a></li>
-        <li><a href="meetings.html">
-          <span class="leaders__label">Next meeting</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">Sunday, Oct 11</span>
+        <li><a class="item reveal" href="meetings.html">
+          <span class="item__slot"></span>
+          <span class="item__rule"></span>
+          <span class="label item__label">The Meetings</span>
+          <h3>Second Sunday. Wherever You Are.</h3>
+          <span class="item__note">An hour on the call, once a month. Roll call by line, then whatever needs saying.</span>
         </a></li>
-        <li><a href="reunion.html#tshirts">
-          <span class="leaders__label">Reunion t&#8209;shirts</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">Order by June 18</span>
-        </a></li>
-        <li><a href="reunion.html">
-          <span class="leaders__label">Registration</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">$65 adults</span>
-        </a></li>
-        <li><a href="announcements.html">
-          <span class="leaders__label">Family news</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">Announcements</span>
-        </a></li>
-        <li><a href="about.html">
-          <span class="leaders__label">Officers &amp; bylaws</span>
-          <span class="leaders__dots"></span>
-          <span class="leaders__value">About us</span>
+        <li><a class="item reveal" href="about.html">
+          <span class="item__slot"></span>
+          <span class="item__rule"></span>
+          <span class="label item__label">The Family</span>
+          <h3>Five Lines. Six Generations. One Table.</h3>
+          <span class="item__note">Three hundred and forty of us, descended from Eli and Mattie, scattered across nine states.</span>
         </a></li>
       </ul>
     </div>
   </section>
 
-  <section class="section--tint">
+  <section class="closing">
     <div class="wrap">
-      <p class="eyebrow">From the family news</p>
-      <h2>Lately</h2>
-      <ul class="feed">
-        <li class="post">
-          <div class="post__aside">
-            <span class="chip chip--milestone">Milestone</span>
-            <span class="post__date">September 14</span>
-          </div>
-          <h3>Denise Hargrove-Bell passed the Maryland bar</h3>
-          <p>Sworn in at the Court of Appeals in Annapolis, with nine cousins in the gallery. She is the third lawyer out of the Ruth line.</p>
-        </li>
-        <li class="post">
-          <div class="post__aside">
-            <span class="chip chip--celebration">Celebration</span>
-            <span class="post__date">September 6</span>
-          </div>
-          <h3>September birthdays</h3>
-          <ul>
-            <li>Aunt Clara &mdash; the 3rd</li>
-            <li>Marcus Hargrove Jr. &mdash; the 12th</li>
-            <li>Twyla Pratt &mdash; the 22nd</li>
-          </ul>
-        </li>
-        <li class="post">
-          <div class="post__aside">
-            <span class="chip chip--news">Notice</span>
-            <span class="post__date">August 30</span>
-          </div>
-          <h3>Scholarship fund cleared $6,000</h3>
-          <p>Two awards go out next spring to graduating seniors in the family. Applications open in February; the Historian is collecting them.</p>
-        </li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn--ghost" href="announcements.html">All announcements</a>
+      <p class="label reveal">Family news</p>
+      <h2 class="reveal" style="margin-top:clamp(1.5rem,3vw,2.5rem)">Denise passed the bar. Josiah turned one. RaySharpe is gone.</h2>
+      <p class="closing__sub reveal">Everything that happened to us since the last time we were all in a room together.</p>
+      <div class="actions reveal">
+        <a class="action" href="announcements.html">All Announcements</a>
       </div>
     </div>
   </section>
@@ -151,39 +89,42 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <div>
-      <p class="footer__name">The Hargrove Family Association</p>
-      <p>P.O. Box 4412<br>Baltimore, MD 21211</p>
-      <p><a href="mailto:hello@hargrovefamily.example">hello@hargrovefamily.example</a></p>
+    <div class="footer__col">
+      <p>The Hargrove Family Association<br>P.O. Box 4412, Baltimore, MD 21211</p>
+      <a href="mailto:hello@hargrovefamily.example">hello@hargrovefamily.example</a>
     </div>
-    <div>
-      <p class="label">Members</p>
-      <p><a href="dues.html">Pay dues</a></p>
-      <p><a href="meetings.html">Meeting calendar</a></p>
-      <p><a href="about.html">Bylaws</a></p>
+    <div class="footer__col">
+      <a href="dues.html">Pay dues</a>
+      <a href="meetings.html">Meeting calendar</a>
+      <a href="about.html">Officers &amp; bylaws</a>
     </div>
-    <div>
-      <p class="label">Keep up</p>
-      <p><a href="#">Private Facebook group</a></p>
-      <p><a href="#">Instagram</a></p>
-      <p><a href="announcements.html">Submit an announcement</a></p>
+    <div class="footer__col">
+      <a href="reunion.html">2027 reunion</a>
+      <a href="reunion.html#tshirts">Reunion shirts</a>
+      <a href="announcements.html">Submit news</a>
     </div>
-    <p class="footer__note">&copy; 2026 The Hargrove Family Association. <span>Demo build &mdash; every name, date, address and link on this site is a placeholder.</span></p>
+    <p class="footer__note">&copy; 2026 The Hargrove Family Association. Demo build &mdash; every name, date and link is a placeholder, and the grey blocks are photograph slots.</p>
   </div>
 </footer>
 
 <script>
 (function () {
-  var el = document.getElementById("countdown");
-  if (!el) { return; }
-  var days = Math.ceil((new Date("2027-07-16T09:00:00-04:00") - new Date()) / 86400000);
-  if (days > 1) {
-    el.innerHTML = "<strong>" + days + "</strong> days hence";
-  } else if (days >= 0) {
-    el.textContent = "Happening now — see you there";
-  } else {
-    el.textContent = "See you at the next one";
-  }
+  var root = document.documentElement;
+  if (!("IntersectionObserver" in window)) { return; }
+  root.classList.add("js");
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+  document.querySelectorAll(".reveal").forEach(function (el) {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.92) { return; }
+    el.classList.add("pending");
+    io.observe(el);
+  });
 })();
 </script>
 
