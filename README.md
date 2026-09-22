@@ -4,6 +4,22 @@ A seven-page static website built from Tanah's brief, set like a printed church
 program. Plain HTML and one stylesheet —
 no build step, no framework, no dependencies. Open `index.html` in a browser to view it.
 
+## Two builds live here
+
+`app/` is the React version and is where active work happens. The seven
+`.html` files at the root are the original static build, kept until the
+redesign is settled across every page.
+
+```sh
+cd app
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # writes app/dist
+```
+
+Only the home page has been ported to React so far. The other six are
+still served by the static files at the root.
+
 ## Files
 
 | File | Page |
