@@ -11,16 +11,17 @@
   --ink-soft: #545849;
   --muted: #8A8B7C;
   --rule: #CFCCBF;
-  --slot-a: #CBC2C0;
-  --slot-b: #E2DDD6;
+  --slot-a: #C8C9BC;
+  --slot-b: #DEDCD1;
 
-  --accent: #4F1F3F;
-  --accent-hover: #3B152F;
-  --on-accent: #F7F2EC;
-  --band: #3A1631;
-  --on-band: #F4ECE7;
-  --on-band-soft: #CDB8C5;
-  --band-rule: rgba(244, 236, 231, .22);
+  --accent-top: #DADDE1;
+  --accent: #B9BEC4;
+  --accent-hover: #A5AAB1;
+  --on-accent: #1B211C;
+  --band: #C6CACF;
+  --on-band: #1B211C;
+  --on-band-soft: #4A4F55;
+  --band-rule: rgba(27, 33, 28, .18);
   --foot: #1B211C;
   --on-foot: #ECE9DF;
   --on-foot-soft: #A6A89A;
@@ -45,10 +46,13 @@
     --rule: #363A2F;
     --slot-a: #2C3026;
     --slot-b: #1F2219;
-    --accent: #D2A9C4;
-    --accent-hover: #E2C1D6;
-    --on-accent: #22101D;
-    --band: #2A1024;
+    --accent-top: #E3E6E9;
+    --accent: #BEC2C8;
+    --accent-hover: #D0D4D9;
+    --on-accent: #14160F;
+    --band: #2B2E33;
+    --on-band: #E6E8EB;
+    --on-band-soft: #A9AEB5;
     --foot: #0C0E0A;
   }
 }
@@ -61,10 +65,13 @@
   --rule: #363A2F;
   --slot-a: #2C3026;
   --slot-b: #1F2219;
-  --accent: #D2A9C4;
-  --accent-hover: #E2C1D6;
-  --on-accent: #22101D;
-  --band: #2A1024;
+  --accent-top: #E3E6E9;
+  --accent: #BEC2C8;
+  --accent-hover: #D0D4D9;
+  --on-accent: #14160F;
+  --band: #2B2E33;
+  --on-band: #E6E8EB;
+  --on-band-soft: #A9AEB5;
   --foot: #0C0E0A;
 }
 
@@ -208,12 +215,12 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 .btn:hover::after { transform: translateX(5px); }
 .btn:active { transform: translateY(1px); }
 
-.btn--primary { background: var(--accent); color: var(--on-accent); }
-.btn--primary:hover { background: var(--accent-hover); color: var(--on-accent); }
+.btn--primary { background: var(--accent); background: linear-gradient(180deg, var(--accent-top), var(--accent)); color: var(--on-accent); border-color: var(--accent-hover); }
+.btn--primary:hover { background: linear-gradient(180deg, var(--accent), var(--accent-hover)); color: var(--on-accent); }
 .btn--secondary { border-color: var(--ink); color: var(--ink); }
 .btn--secondary:hover { background: var(--ink); color: var(--bone); }
-.btn--light { background: var(--on-band); color: var(--band); }
-.btn--light:hover { background: #fff; color: var(--band); }
+.btn--light { background: var(--ink); color: var(--bone); }
+.btn--light:hover { background: var(--ink-soft); color: var(--bone); }
 .btn--small { padding: .8rem 1.15rem; font-size: .7rem; }
 .btn--small::after { font-size: .95rem; }
 
