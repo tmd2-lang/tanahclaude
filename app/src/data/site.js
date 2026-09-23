@@ -12,6 +12,8 @@ const site = {
   shortName: "Hargrove Family Association",
   established: "Est. 1978 · Baltimore, Maryland",
 
+  cta: { label: "Pay Dues", href: "/dues" },
+
   nav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },

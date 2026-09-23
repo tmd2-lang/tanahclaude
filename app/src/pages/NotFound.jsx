@@ -9,7 +9,7 @@ export default function NotFound() {
         label: "404",
         title: "Nothing here.",
         sub: "That page doesn’t exist. It may have moved when the site was rebuilt.",
-        actions: [{ label: "Back to the home page", href: "/" }],
+        actions: [{ label: "Back to the home page", href: "/", variant: "primary" }],
       }}
     />
   );

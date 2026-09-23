@@ -4,8 +4,8 @@ const dues = {
     title: "Dues keep the association running.",
     sub: "$40 a year per adult member, or $5 a month if that is easier. The year runs January to December, and members 17 and under are covered by a parent’s membership.",
     actions: [
-      { label: "Pay dues on Cheddar Up", href: null },
-      { label: "Mail a check instead", href: "/contact" },
+      { label: "Pay dues on Cheddar Up", href: null, variant: "primary" },
+      { label: "Mail a check instead", href: "/contact", variant: "secondary" },
     ],
   },
 

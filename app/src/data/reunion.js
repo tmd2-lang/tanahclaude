@@ -4,8 +4,8 @@ const reunion = {
     title: "Baltimore, July 16–18, 2027.",
     sub: "Hosted by the Eli Jr. line, back where it started. A Friday meet-and-greet, the Saturday banquet, and Sunday service followed by the picnic in Druid Hill Park.",
     actions: [
-      { label: "Register and pay", href: null },
-      { label: "Order a t-shirt", href: "/reunion#tshirts" },
+      { label: "Register and pay", href: null, variant: "primary" },
+      { label: "Order a t-shirt", href: "/reunion#tshirts", variant: "secondary" },
     ],
   },
 
@@ -68,7 +68,7 @@ const reunion = {
     ],
     deadline: "Orders close Friday, June 18, 2027.",
     deadlineNote: "The printer needs four weeks and orders exactly what was paid for, so after that date your size isn’t guaranteed.",
-    action: { label: "Order shirts on Cheddar Up", href: null },
+    action: { label: "Order shirts on Cheddar Up", href: null, variant: "primary" },
   },
 
   order: {
@@ -87,7 +87,7 @@ const reunion = {
       label: "Headcount",
       title: "Tell us you’re coming.",
       text: "Registration is the real RSVP, but if you’re not ready to pay yet, a headcount helps the host line plan the food. It takes thirty seconds.",
-      action: { label: "Add your headcount", href: null },
+      action: { label: "Add your headcount", href: null, variant: "secondary" },
     },
   },
 };

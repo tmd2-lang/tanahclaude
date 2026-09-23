@@ -35,7 +35,7 @@ function ContactForm({ form }) {
           <label htmlFor="c-message">Message</label>
           <textarea id="c-message" name="message" required />
         </div>
-        <button className="action" type="submit">Send message</button>
+        <button className="btn btn--primary" type="submit">Send message</button>
         {attempted && <p className="form__notice" role="status">{form.demoNotice}</p>}
       </form>
       <details className="setup">

@@ -4,8 +4,8 @@ const meetings = {
     title: "Second Sunday, every month.",
     sub: "7:00 PM Eastern, on Zoom. About an hour: roll call by line, treasurer’s report, reunion planning, then open floor. Everyone is welcome, dues-paid or not.",
     actions: [
-      { label: "Join the next meeting", href: null },
-      { label: "Add the calendar to your phone", href: null },
+      { label: "Join the next meeting", href: null, variant: "primary" },
+      { label: "Add the calendar to your phone", href: null, variant: "secondary" },
     ],
   },
 
@@ -45,7 +45,7 @@ const meetings = {
     label: "Questions about meetings",
     headline: "Dana keeps the minutes and the calendar.",
     sub: "Write to her for the link, the agenda, or last month’s recording. Meetings are recorded and the link stays up for two weeks, so missing 7:00 PM doesn’t mean missing the meeting.",
-    actions: [{ label: "Email the secretary", href: "mailto:secretary@hargrovefamily.example" }],
+    actions: [{ label: "Email the secretary", href: "mailto:secretary@hargrovefamily.example", variant: "secondary" }],
   },
 };
 

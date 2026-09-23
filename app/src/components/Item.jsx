@@ -4,7 +4,7 @@ import SmartLink from "./SmartLink.jsx";
 export default function Item({ item }) {
   return (
     <Reveal as="li" className="item">
-      <div className="item__slot" />
+      <div className="item__media"><div className="item__slot" /></div>
       <div className="item__rule" />
       <p className="label item__label">{item.label}</p>
       <h3><SmartLink href={item.href}>{item.title}</SmartLink></h3>

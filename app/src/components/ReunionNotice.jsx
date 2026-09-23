@@ -1,6 +1,6 @@
 import Reveal from "./Reveal.jsx";
 import Countdown from "./Countdown.jsx";
-import SmartLink from "./SmartLink.jsx";
+import Actions from "./Actions.jsx";
 
 export default function ReunionNotice({ reunion }) {
   return (
@@ -12,7 +12,7 @@ export default function ReunionNotice({ reunion }) {
         </Reveal>
         <Reveal className="notice__right">
           <Countdown />
-          <SmartLink className="action" href={reunion.action.href}>{reunion.action.label}</SmartLink>
+          <Actions items={[reunion.action]} />
         </Reveal>
       </div>
     </section>

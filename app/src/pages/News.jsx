@@ -4,7 +4,7 @@ import PageIntro from "../components/PageIntro.jsx";
 import { Block } from "../components/Block.jsx";
 import Band from "../components/Band.jsx";
 import Reveal from "../components/Reveal.jsx";
-import SmartLink from "../components/SmartLink.jsx";
+import Actions from "../components/Actions.jsx";
 
 export default function News() {
   usePageTitle("News");
@@ -34,7 +34,7 @@ export default function News() {
           ))}
         </ol>
         <div className="actions">
-          <SmartLink className="action" href={archive.href}>{archive.label}</SmartLink>
+          <Actions items={[archive]} />
         </div>
       </Block>
 

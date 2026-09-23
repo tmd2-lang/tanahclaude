@@ -7,7 +7,7 @@ import Prose from "../components/Prose.jsx";
 import Placeholder from "../components/Placeholder.jsx";
 import Countdown from "../components/Countdown.jsx";
 import Reveal from "../components/Reveal.jsx";
-import SmartLink from "../components/SmartLink.jsx";
+import Actions from "../components/Actions.jsx";
 
 export default function Reunion() {
   usePageTitle("Reunion");
@@ -52,7 +52,7 @@ export default function Reunion() {
             <p className="deadline">{shirts.deadline}</p>
             <p>{shirts.deadlineNote}</p>
             <div className="actions">
-              <SmartLink className="action" href={shirts.action.href}>{shirts.action.label}</SmartLink>
+              <Actions items={[shirts.action]} />
             </div>
           </Reveal>
         </div>
@@ -68,7 +68,7 @@ export default function Reunion() {
           <h3>{stay.headcount.title}</h3>
           <p>{stay.headcount.text}</p>
           <div className="actions">
-            <SmartLink className="action" href={stay.headcount.action.href}>{stay.headcount.action.label}</SmartLink>
+            <Actions items={[stay.headcount.action]} />
           </div>
         </div>
       </Split>

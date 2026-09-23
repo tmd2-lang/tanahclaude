@@ -3,8 +3,8 @@ const home = {
     headline: "We have never missed a July.",
     sub: "Forty-eight summers. Eleven cities. Five lines of one family that decided, in a church basement, to stay one.",
     actions: [
-      { label: "The 2027 Reunion", href: "/reunion" },
-      { label: "Pay Dues", href: "/dues" },
+      { label: "The 2027 Reunion", href: "/reunion", variant: "primary" },
+      { label: "Pay Dues", href: "/dues", variant: "secondary" },
     ],
   },
 
@@ -14,7 +14,7 @@ const home = {
     label: "The forty-ninth annual reunion",
     date: "July 16–18, 2027",
     place: "Baltimore, Maryland",
-    action: { label: "Save the Date", href: "/reunion" },
+    action: { label: "Save the Date", href: "/reunion", variant: "light" },
   },
 
   trioHeading: "The Hargrove Family.",
@@ -47,7 +47,7 @@ const home = {
     headline: "Denise passed the bar. Josiah arrived. RaySharpe is gone.",
     sub: "Everything that happened to us since the last time we were all in a room together.",
     actions: [
-      { label: "All Announcements", href: "/news" },
+      { label: "All Announcements", href: "/news", variant: "secondary" },
       { label: "Submit News", href: "/news" },
     ],
   },

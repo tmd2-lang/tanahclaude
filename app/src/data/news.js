@@ -3,7 +3,7 @@ const news = {
     label: "Family news",
     title: "Announcements.",
     sub: "Birthdays, graduations, new babies, and the losses we carry together. Anybody in the family can post here — you don’t have to go through an officer.",
-    actions: [{ label: "Submit an announcement", href: null }],
+    actions: [{ label: "Submit an announcement", href: null, variant: "primary" }],
     note: "Goes to a short form: your name, the occasion, the date, and anything you want said. The Secretary posts new entries within a day or two.",
   },
 
