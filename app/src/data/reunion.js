@@ -58,7 +58,7 @@ const reunion = {
   shirts: {
     label: "Reunion merch",
     heading: "The 2027 shirt.",
-    slotAlt: "Photograph slot: the 2027 reunion t-shirt",
+    image: { src: null, alt: "The 2027 reunion t-shirt" },
     caption: "Final art goes here once the design vote closes in October.",
     rows: [
       { term: "Price", value: "$25 · $28 for 2XL and up" },

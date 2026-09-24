@@ -15,7 +15,7 @@ export default function About() {
     <>
       <PageIntro intro={intro} />
 
-      <Split label={history.label} heading={history.heading}>
+      <Split tone="alt" label={history.label} heading={history.heading}>
         <Prose paragraphs={history.paragraphs} />
       </Split>
 
@@ -23,7 +23,7 @@ export default function About() {
         <Prose paragraphs={purpose.paragraphs} />
       </Split>
 
-      <Split label={officers.label} heading={officers.heading}>
+      <Split tone="alt" label={officers.label} heading={officers.heading}>
         <Rows rows={officers.rows} />
         <div className="aside-note">
           <p className="label">{documents.label}</p>

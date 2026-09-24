@@ -8,6 +8,7 @@ import Placeholder from "../components/Placeholder.jsx";
 import Countdown from "../components/Countdown.jsx";
 import Reveal from "../components/Reveal.jsx";
 import Actions from "../components/Actions.jsx";
+import Photo from "../components/Photo.jsx";
 
 export default function Reunion() {
   usePageTitle("Reunion");
@@ -16,7 +17,7 @@ export default function Reunion() {
     <>
       <PageIntro intro={intro} />
 
-      <Split label={details.label} aside={<Countdown as="h2" className="countdown-heading" />}>
+      <Split tone="alt" label={details.label} aside={<Countdown as="h2" className="countdown-heading" />}>
         <Rows rows={details.rows} />
       </Split>
 
@@ -39,10 +40,12 @@ export default function Reunion() {
         </ol>
       </Block>
 
-      <Block id="tshirts">
+      <Block id="tshirts" tone="alt">
         <div className="shirt">
           <Reveal>
-            <div className="shirt__slot" role="img" aria-label={shirts.slotAlt} />
+            <div className="shirt__slot" {...(shirts.image?.src ? {} : { role: "img", "aria-label": shirts.image?.alt })}>
+              <Photo image={shirts.image} />
+            </div>
             <p className="shirt__caption">{shirts.caption}</p>
           </Reveal>
           <Reveal className="shirt__main">

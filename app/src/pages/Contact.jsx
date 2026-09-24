@@ -53,7 +53,7 @@ export default function Contact() {
     <>
       <PageIntro intro={intro} />
 
-      <Split label={directory.label} heading={directory.heading}>
+      <Split tone="alt" label={directory.label} heading={directory.heading}>
         <Rows rows={directory.rows} />
       </Split>
 
@@ -61,7 +61,7 @@ export default function Contact() {
         <ContactForm form={form} />
       </Split>
 
-      <Split label={mail.label} heading={mail.heading}>
+      <Split tone="alt" label={mail.label} heading={mail.heading}>
         <address className="address">
           {mail.address.map((line, i) => (
             <span key={line}>{line}{i < mail.address.length - 1 && <br />}</span>

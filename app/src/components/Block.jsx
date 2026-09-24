@@ -1,9 +1,12 @@
 import Reveal from "./Reveal.jsx";
 
-/** A full-width band: a hairline, an optional heading, then content. */
-export function Block({ label, heading, sub, id, children }) {
+/** tone="alt" puts a section on the stone ground; sections alternate so the page splits into clear bands. */
+const blockClass = (tone) => (tone === "alt" ? "block block--alt" : "block");
+
+/** A full-width section: an optional heading, then content. */
+export function Block({ label, heading, sub, id, tone, children }) {
   return (
-    <section className="block" id={id}>
+    <section className={blockClass(tone)} id={id}>
       <div className="wrap">
         <div className="block__inner">
           {(label || heading) && (
@@ -20,10 +23,10 @@ export function Block({ label, heading, sub, id, children }) {
   );
 }
 
-/** A hairline, then a narrow heading column beside a wide content column. */
-export function Split({ label, heading, aside, id, children }) {
+/** A narrow heading column beside a wide content column. */
+export function Split({ label, heading, aside, id, tone, children }) {
   return (
-    <section className="block" id={id}>
+    <section className={blockClass(tone)} id={id}>
       <div className="wrap">
         <div className="block__inner split">
           <Reveal className="split__aside">

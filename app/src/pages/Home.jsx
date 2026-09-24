@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero established={site.established} hero={home.hero} />
-      <Plate alt={home.plateAlt} />
+      <Plate image={home.plate} />
       <ReunionNotice reunion={home.reunion} />
       <Trio heading={home.trioHeading} items={home.trio} />
-      <Band band={home.closing} />
+      <Band band={home.closing} tone="alt" />
     </>
   );
 }

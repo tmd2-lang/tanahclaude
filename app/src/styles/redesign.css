@@ -5,27 +5,27 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-  --bone: #EFEDE7;
-  --bone-2: #E5E2D8;
-  --ink: #1B211C;
-  --ink-soft: #545849;
-  --muted: #8A8B7C;
-  --rule: #CFCCBF;
-  --slot-a: #C8C9BC;
-  --slot-b: #DEDCD1;
+  --bone: #FFFFFF;
+  --bone-2: #F4F2EE;
+  --ink: #1A1918;
+  --ink-soft: #57534E;
+  --muted: #8C8781;
+  --rule: #E3DFD9;
+  --slot-a: #DAD6D0;
+  --slot-b: #EEEBE6;
 
   --accent-top: #DADDE1;
   --accent: #B9BEC4;
   --accent-hover: #A5AAB1;
-  --on-accent: #1B211C;
+  --on-accent: #1A1918;
   --band: #C6CACF;
-  --on-band: #1B211C;
+  --on-band: #1A1918;
   --on-band-soft: #4A4F55;
-  --band-rule: rgba(27, 33, 28, .18);
-  --foot: #1B211C;
-  --on-foot: #ECE9DF;
-  --on-foot-soft: #A6A89A;
-  --foot-rule: rgba(236, 233, 223, .16);
+  --band-rule: rgba(26, 25, 24, .18);
+  --foot: #1A1918;
+  --on-foot: #EFECE7;
+  --on-foot-soft: #A8A39C;
+  --foot-rule: rgba(239, 236, 231, .14);
   --header-h: 5.25rem;
 
   /* The whole point of this pass: space. */
@@ -38,41 +38,41 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bone: #14160F;
-    --bone-2: #1D2018;
-    --ink: #EDEBE0;
-    --ink-soft: #B2B1A2;
-    --muted: #8B8C7D;
-    --rule: #363A2F;
-    --slot-a: #2C3026;
-    --slot-b: #1F2219;
+    --bone: #121211;
+    --bone-2: #1B1A19;
+    --ink: #EFECE7;
+    --ink-soft: #B4AFA8;
+    --muted: #8C8781;
+    --rule: #2F2D2A;
+    --slot-a: #2B2926;
+    --slot-b: #1F1E1C;
     --accent-top: #E3E6E9;
     --accent: #BEC2C8;
     --accent-hover: #D0D4D9;
-    --on-accent: #14160F;
+    --on-accent: #121211;
     --band: #2B2E33;
     --on-band: #E6E8EB;
     --on-band-soft: #A9AEB5;
-    --foot: #0C0E0A;
+    --foot: #0A0A09;
   }
 }
 :root[data-theme="dark"] {
-  --bone: #14160F;
-  --bone-2: #1D2018;
-  --ink: #EDEBE0;
-  --ink-soft: #B2B1A2;
-  --muted: #8B8C7D;
-  --rule: #363A2F;
-  --slot-a: #2C3026;
-  --slot-b: #1F2219;
+  --bone: #121211;
+  --bone-2: #1B1A19;
+  --ink: #EFECE7;
+  --ink-soft: #B4AFA8;
+  --muted: #8C8781;
+  --rule: #2F2D2A;
+  --slot-a: #2B2926;
+  --slot-b: #1F1E1C;
   --accent-top: #E3E6E9;
   --accent: #BEC2C8;
   --accent-hover: #D0D4D9;
-  --on-accent: #14160F;
+  --on-accent: #121211;
   --band: #2B2E33;
   --on-band: #E6E8EB;
   --on-band-soft: #A9AEB5;
-  --foot: #0C0E0A;
+  --foot: #0A0A09;
 }
 
 body {
@@ -295,6 +295,7 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 /* ---------- Closing note ---------- */
 
 .closing { padding-block: var(--section); background: var(--bone-2); }
+.closing--plain { background: var(--bone); }
 .closing h2 { max-width: 17ch; }
 .closing .label + .closing__headline { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
 .closing__sub { margin-top: clamp(1.5rem, 3vw, 2.25rem); max-width: 40ch; font-size: 1.15rem; color: var(--ink-soft); }
@@ -388,12 +389,10 @@ a[aria-disabled="true"] { cursor: default; }
 
 /* ---------- Blocks: a hairline, the content, then air ---------- */
 
-.block { padding-top: var(--block); }
-main > .block:last-child { padding-bottom: var(--block); }
-/* A closing band draws its own full-width rule; without this gap that
-   rule sits directly on the last row of the block above it. */
-.block + .closing { margin-top: var(--block); }
-.block__inner { border-top: 1px solid var(--rule); padding-top: clamp(1.75rem, 3.5vw, 3rem); }
+.block { padding-block: var(--block); }
+.block--alt { background: var(--bone-2); }
+/* Boxes that sit on a stone section flip to white so they stay visible. */
+.block--alt .embed, .block--alt .setup pre { background: var(--bone); }
 .block__head { margin-bottom: clamp(2.25rem, 4.5vw, 4rem); }
 .block__head .label + h2 { margin-top: clamp(.9rem, 1.6vw, 1.25rem); }
 .block__sub { margin-top: clamp(1.1rem, 2vw, 1.5rem); max-width: 56ch; font-size: clamp(1.05rem, 1.3vw, 1.2rem); color: var(--ink-soft); }
@@ -641,3 +640,10 @@ main > .block:last-child { padding-bottom: var(--block); }
   transition: opacity .25s ease, transform .25s ease;
 }
 .toast[data-open] { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Photographs ----------
+   Any slot given an image fills it edge to edge; empty slots keep the
+   placeholder gradient. */
+
+.plate, .item__slot, .shirt__slot { position: relative; overflow: hidden; }
+.photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }

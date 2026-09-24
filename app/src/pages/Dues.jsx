@@ -14,7 +14,7 @@ export default function Dues() {
     <>
       <PageIntro intro={intro} />
 
-      <Split label={funds.label} heading={funds.heading}>
+      <Split tone="alt" label={funds.label} heading={funds.heading}>
         <Rows rows={funds.rows} />
       </Split>
 
@@ -22,11 +22,11 @@ export default function Dues() {
         <Placeholder {...payment} />
       </Block>
 
-      <Split label={faq.label} heading={faq.heading}>
+      <Split tone="alt" label={faq.label} heading={faq.heading}>
         <Faq items={faq.items} />
       </Split>
 
-      <Band band={receipt} />
+      <Band band={receipt} tone="plain" />
     </>
   );
 }

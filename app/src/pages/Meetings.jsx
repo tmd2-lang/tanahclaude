@@ -13,7 +13,7 @@ export default function Meetings() {
     <>
       <PageIntro intro={intro} />
 
-      <Split label={upcoming.label} heading={upcoming.heading}>
+      <Split tone="alt" label={upcoming.label} heading={upcoming.heading}>
         <Listing items={upcoming.items} />
       </Split>
 
@@ -21,11 +21,11 @@ export default function Meetings() {
         <Placeholder {...calendar} />
       </Block>
 
-      <Split label={minutes.label} heading={minutes.heading}>
+      <Split tone="alt" label={minutes.label} heading={minutes.heading}>
         <Listing items={minutes.items} />
       </Split>
 
-      <Band band={questions} />
+      <Band band={questions} tone="plain" />
     </>
   );
 }

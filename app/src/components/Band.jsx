@@ -2,9 +2,9 @@ import Reveal from "./Reveal.jsx";
 import Actions from "./Actions.jsx";
 
 /** A closing statement: small label, one large line, a sentence, links. */
-export default function Band({ band }) {
+export default function Band({ band, tone }) {
   return (
-    <section className="closing">
+    <section className={tone === "plain" ? "closing closing--plain" : "closing"}>
       <div className="wrap">
         {band.label && <Reveal as="p" className="label">{band.label}</Reveal>}
         <Reveal as="h2" className="closing__headline">{band.headline}</Reveal>

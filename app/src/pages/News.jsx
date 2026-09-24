@@ -13,7 +13,7 @@ export default function News() {
     <>
       <PageIntro intro={intro} />
 
-      <Block>
+      <Block tone="alt">
         <ol className="feed">
           {posts.map((post) => (
             <Reveal as="li" className={post.memoriam ? "post post--memoriam" : "post"} key={post.title}>
@@ -38,7 +38,7 @@ export default function News() {
         </div>
       </Block>
 
-      <Band band={privacy} />
+      <Band band={privacy} tone="plain" />
     </>
   );
 }
