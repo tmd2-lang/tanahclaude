@@ -5,25 +5,25 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-  --bone: #EFEDE7;
-  --bone-2: #E5E2D8;
-  --alt-ground: #FFFFFF;
-  --ink: #1B211C;
-  --ink-soft: #545849;
-  --muted: #8A8B7C;
-  --rule: #CFCCBF;
-  --slot-a: #C8C9BC;
-  --slot-b: #DEDCD1;
+  /* One fixed look for every visitor. The base is the dark green; light
+     sections below redefine the neutrals for themselves. */
+  color-scheme: dark;
 
-  --accent-top: #DADDE1;
-  --accent: #B9BEC4;
-  --accent-hover: #A5AAB1;
-  --on-accent: #1B211C;
-  --band: #C6CACF;
-  --on-band: #1B211C;
-  --on-band-soft: #4A4F55;
-  --band-rule: rgba(27, 33, 28, .18);
-  --foot: #1B211C;
+  --bone: #14160F;
+  --bone-2: #1D2018;
+  --alt-ground: #FFFFFF;
+  --ink: #EDEBE0;
+  --ink-soft: #B2B1A2;
+  --muted: #8B8C7D;
+  --rule: #363A2F;
+  --slot-a: #2C3026;
+  --slot-b: #1F2219;
+
+  --accent-top: #E3E6E9;
+  --accent: #BEC2C8;
+  --accent-hover: #D0D4D9;
+  --on-accent: #14160F;
+  --foot: #0C0E0A;
   --on-foot: #ECE9DF;
   --on-foot-soft: #A6A89A;
   --foot-rule: rgba(236, 233, 223, .16);
@@ -37,45 +37,23 @@
   --serif: "Newsreader", "Hoefler Text", Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bone: #14160F;
-    --bone-2: #1D2018;
-    --alt-ground: #1A1C16;
-    --ink: #EDEBE0;
-    --ink-soft: #B2B1A2;
-    --muted: #8B8C7D;
-    --rule: #363A2F;
-    --slot-a: #2C3026;
-    --slot-b: #1F2219;
-    --accent-top: #E3E6E9;
-    --accent: #BEC2C8;
-    --accent-hover: #D0D4D9;
-    --on-accent: #14160F;
-    --band: #2B2E33;
-    --on-band: #E6E8EB;
-    --on-band-soft: #A9AEB5;
-    --foot: #0C0E0A;
-  }
-}
-:root[data-theme="dark"] {
-  --bone: #14160F;
-  --bone-2: #1D2018;
-  --alt-ground: #1A1C16;
-  --ink: #EDEBE0;
-  --ink-soft: #B2B1A2;
-  --muted: #8B8C7D;
-  --rule: #363A2F;
-  --slot-a: #2C3026;
-  --slot-b: #1F2219;
-  --accent-top: #E3E6E9;
-  --accent: #BEC2C8;
-  --accent-hover: #D0D4D9;
-  --on-accent: #14160F;
-  --band: #2B2E33;
-  --on-band: #E6E8EB;
-  --on-band-soft: #A9AEB5;
-  --foot: #0C0E0A;
+/* White sections. Custom properties inherit, so redefining the neutrals
+   here flips everything inside to dark-on-white without touching any
+   component rule. */
+.block--alt,
+.closing:not(.closing--plain),
+.notice {
+  color-scheme: light;
+  --bone: #FFFFFF;
+  --bone-2: #F1F0EB;
+  --ink: #1B211C;
+  --ink-soft: #545849;
+  --muted: #74766A;
+  --rule: #DCDAD1;
+  --slot-a: #C8C9BC;
+  --slot-b: #DEDCD1;
+  background: var(--bone);
+  color: var(--ink);
 }
 
 body {
@@ -134,7 +112,7 @@ p { margin: 0; }
   border-bottom: 1px solid var(--rule);
 }
 .masthead__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: var(--header-h); }
-.masthead__name { font-size: 1.2rem; letter-spacing: .01em; }
+.masthead__name { font-size: 1.2rem; letter-spacing: .01em; white-space: nowrap; }
 .nav { display: flex; align-items: center; flex-wrap: wrap; gap: 1.75rem; }
 .nav a:not(.btn) {
   padding-block: .35rem;
@@ -288,24 +266,22 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 
 /* ---------- Standing reunion notice ---------- */
 
-.notice { background: var(--band); color: var(--on-band); padding-block: clamp(3.25rem, 7vw, 6rem); margin-top: clamp(3rem, 6vw, 5rem); }
-.notice .label { color: var(--on-band-soft); }
+.notice { padding-block: clamp(3.25rem, 7vw, 6rem); margin-top: clamp(3rem, 6vw, 5rem); }
 .notice__inner { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.75rem 3rem; }
 .notice__line { margin-top: clamp(1rem, 2vw, 1.5rem); font-size: clamp(1.7rem, 3.4vw, 3rem); line-height: 1.05; }
 .notice__right { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem 2.5rem; }
-.notice__count { font-size: clamp(1.7rem, 3.4vw, 3rem); line-height: 1.05; color: var(--on-band-soft); }
+.notice__count { font-size: clamp(1.7rem, 3.4vw, 3rem); line-height: 1.05; color: var(--ink-soft); }
 
 /* ---------- Closing note ---------- */
 
-.closing { padding-block: var(--section); background: var(--alt-ground); }
-.closing--plain { background: var(--bone); }
+.closing { padding-block: var(--section); }
 .closing h2 { max-width: 17ch; }
 .closing .label + .closing__headline { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
 .closing__sub { margin-top: clamp(1.5rem, 3vw, 2.25rem); max-width: 40ch; font-size: 1.15rem; color: var(--ink-soft); }
 
 /* ---------- Footer ---------- */
 
-.footer { padding-block: clamp(3.5rem, 7vw, 6rem) clamp(2rem, 4vw, 3rem); background: var(--foot); color: var(--on-foot); }
+.footer { padding-block: clamp(3.5rem, 7vw, 6rem) clamp(2rem, 4vw, 3rem); background: var(--foot); color: var(--on-foot); border-top: 1px solid var(--foot-rule); }
 .footer__inner { display: flex; flex-wrap: wrap; gap: 2.5rem 4rem; justify-content: space-between; }
 .footer__col { display: grid; gap: .6rem; align-content: start; }
 .footer__col a, .footer__col p { font-size: .95rem; color: var(--on-foot-soft); }
@@ -335,10 +311,8 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 
 /* ---------- Narrow ---------- */
 
-@media (max-width: 900px) {
-  .trio { grid-template-columns: 1fr; gap: clamp(3rem, 8vw, 4.5rem); }
-  .item__slot { aspect-ratio: 4 / 3; }
-  .plate { aspect-ratio: 3 / 2; }
+/* Name, seven links and Pay Dues need about 1,190px on one line. */
+@media (max-width: 1280px) {
   .menu-toggle { display: inline-block; }
   .nav {
     display: none;
@@ -358,6 +332,13 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
   .nav a:not(.btn) { padding-block: 1rem; font-size: .8rem; border-bottom: 1px solid var(--rule); }
   .nav a[aria-current="page"] { border-bottom-color: var(--rule); box-shadow: inset 3px 0 0 var(--accent); padding-left: .9rem; }
   .nav .btn { margin: 1.5rem 0 0; justify-content: center; }
+}
+
+
+@media (max-width: 900px) {
+  .trio { grid-template-columns: 1fr; gap: clamp(3rem, 8vw, 4.5rem); }
+  .item__slot { aspect-ratio: 4 / 3; }
+  .plate { aspect-ratio: 3 / 2; }
   .hero h1 { max-width: 100%; }
 }
 
@@ -393,9 +374,7 @@ a[aria-disabled="true"] { cursor: default; }
 /* ---------- Blocks: a hairline, the content, then air ---------- */
 
 .block { padding-block: var(--block); }
-.block--alt { background: var(--alt-ground); }
-/* Boxes that sit on a stone section flip to white so they stay visible. */
-.block--alt .embed, .block--alt .setup pre { background: var(--bone); }
+
 .block__head { margin-bottom: clamp(2.25rem, 4.5vw, 4rem); }
 .block__head .label + h2 { margin-top: clamp(.9rem, 1.6vw, 1.25rem); }
 .block__sub { margin-top: clamp(1.1rem, 2vw, 1.5rem); max-width: 56ch; font-size: clamp(1.05rem, 1.3vw, 1.2rem); color: var(--ink-soft); }
