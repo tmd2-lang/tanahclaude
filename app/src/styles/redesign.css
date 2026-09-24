@@ -5,27 +5,28 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
-  --bone: #FFFFFF;
-  --bone-2: #F4F2EE;
-  --ink: #1A1918;
-  --ink-soft: #57534E;
-  --muted: #8C8781;
-  --rule: #E3DFD9;
-  --slot-a: #DAD6D0;
-  --slot-b: #EEEBE6;
+  --bone: #EFEDE7;
+  --bone-2: #E5E2D8;
+  --alt-ground: #FFFFFF;
+  --ink: #1B211C;
+  --ink-soft: #545849;
+  --muted: #8A8B7C;
+  --rule: #CFCCBF;
+  --slot-a: #C8C9BC;
+  --slot-b: #DEDCD1;
 
   --accent-top: #DADDE1;
   --accent: #B9BEC4;
   --accent-hover: #A5AAB1;
-  --on-accent: #1A1918;
+  --on-accent: #1B211C;
   --band: #C6CACF;
-  --on-band: #1A1918;
+  --on-band: #1B211C;
   --on-band-soft: #4A4F55;
-  --band-rule: rgba(26, 25, 24, .18);
-  --foot: #1A1918;
-  --on-foot: #EFECE7;
-  --on-foot-soft: #A8A39C;
-  --foot-rule: rgba(239, 236, 231, .14);
+  --band-rule: rgba(27, 33, 28, .18);
+  --foot: #1B211C;
+  --on-foot: #ECE9DF;
+  --on-foot-soft: #A6A89A;
+  --foot-rule: rgba(236, 233, 223, .16);
   --header-h: 5.25rem;
 
   /* The whole point of this pass: space. */
@@ -38,41 +39,43 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bone: #121211;
-    --bone-2: #1B1A19;
-    --ink: #EFECE7;
-    --ink-soft: #B4AFA8;
-    --muted: #8C8781;
-    --rule: #2F2D2A;
-    --slot-a: #2B2926;
-    --slot-b: #1F1E1C;
+    --bone: #14160F;
+    --bone-2: #1D2018;
+    --alt-ground: #1A1C16;
+    --ink: #EDEBE0;
+    --ink-soft: #B2B1A2;
+    --muted: #8B8C7D;
+    --rule: #363A2F;
+    --slot-a: #2C3026;
+    --slot-b: #1F2219;
     --accent-top: #E3E6E9;
     --accent: #BEC2C8;
     --accent-hover: #D0D4D9;
-    --on-accent: #121211;
+    --on-accent: #14160F;
     --band: #2B2E33;
     --on-band: #E6E8EB;
     --on-band-soft: #A9AEB5;
-    --foot: #0A0A09;
+    --foot: #0C0E0A;
   }
 }
 :root[data-theme="dark"] {
-  --bone: #121211;
-  --bone-2: #1B1A19;
-  --ink: #EFECE7;
-  --ink-soft: #B4AFA8;
-  --muted: #8C8781;
-  --rule: #2F2D2A;
-  --slot-a: #2B2926;
-  --slot-b: #1F1E1C;
+  --bone: #14160F;
+  --bone-2: #1D2018;
+  --alt-ground: #1A1C16;
+  --ink: #EDEBE0;
+  --ink-soft: #B2B1A2;
+  --muted: #8B8C7D;
+  --rule: #363A2F;
+  --slot-a: #2C3026;
+  --slot-b: #1F2219;
   --accent-top: #E3E6E9;
   --accent: #BEC2C8;
   --accent-hover: #D0D4D9;
-  --on-accent: #121211;
+  --on-accent: #14160F;
   --band: #2B2E33;
   --on-band: #E6E8EB;
   --on-band-soft: #A9AEB5;
-  --foot: #0A0A09;
+  --foot: #0C0E0A;
 }
 
 body {
@@ -294,7 +297,7 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 
 /* ---------- Closing note ---------- */
 
-.closing { padding-block: var(--section); background: var(--bone-2); }
+.closing { padding-block: var(--section); background: var(--alt-ground); }
 .closing--plain { background: var(--bone); }
 .closing h2 { max-width: 17ch; }
 .closing .label + .closing__headline { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
@@ -390,7 +393,7 @@ a[aria-disabled="true"] { cursor: default; }
 /* ---------- Blocks: a hairline, the content, then air ---------- */
 
 .block { padding-block: var(--block); }
-.block--alt { background: var(--bone-2); }
+.block--alt { background: var(--alt-ground); }
 /* Boxes that sit on a stone section flip to white so they stay visible. */
 .block--alt .embed, .block--alt .setup pre { background: var(--bone); }
 .block__head { margin-bottom: clamp(2.25rem, 4.5vw, 4rem); }
