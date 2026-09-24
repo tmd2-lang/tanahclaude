@@ -296,7 +296,7 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 
 .closing { padding-block: var(--section); background: var(--bone-2); }
 .closing h2 { max-width: 17ch; }
-.closing__headline { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+.closing .label + .closing__headline { margin-top: clamp(1.5rem, 3vw, 2.5rem); }
 .closing__sub { margin-top: clamp(1.5rem, 3vw, 2.25rem); max-width: 40ch; font-size: 1.15rem; color: var(--ink-soft); }
 
 /* ---------- Footer ---------- */

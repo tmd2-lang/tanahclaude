@@ -1,9 +1,9 @@
 const home = {
   hero: {
-    headline: "We have never missed a July.",
-    sub: "Forty-eight summers. Eleven cities. Five lines of one family that decided, in a church basement, to stay one.",
+    headline: "Welcome to the Hargrove Family",
+    sub: "Keeping the descendants of Eli and Mattie Hargrove connected since 1978, through monthly meetings, family news and a reunion every summer.",
     actions: [
-      { label: "The 2027 Reunion", href: "/reunion", variant: "primary" },
+      { label: "2027 Reunion Details", href: "/reunion", variant: "primary" },
       { label: "Pay Dues", href: "/dues", variant: "secondary" },
     ],
   },
@@ -11,44 +11,43 @@ const home = {
   plateAlt: "Photograph slot: a wide image from a past reunion",
 
   reunion: {
-    label: "The forty-ninth annual reunion",
+    label: "49th Annual Family Reunion",
     date: "July 16–18, 2027",
     place: "Baltimore, Maryland",
     action: { label: "Save the Date", href: "/reunion", variant: "light" },
   },
 
-  trioHeading: "The Hargrove Family.",
+  trioHeading: "What’s Coming Up",
   trio: [
     {
       label: "July 16–18, 2027 · Baltimore",
-      title: "Three Days Together. Every July.",
-      note: "Friday fish fry, Saturday banquet and business meeting, Sunday memorial service and the picnic in Druid Hill.",
+      title: "Family Reunion 2027",
+      note: "Three days in Baltimore. See the schedule, registration and hotel information.",
       href: "/reunion",
       action: { label: "Reunion details", href: "/reunion" },
     },
     {
       label: "Sunday, Oct 11 · 7:00 PM ET",
-      title: "Second Sunday. Wherever You Are.",
-      note: "An hour on the call, once a month. Roll call by line, treasurer’s report, then whatever needs saying.",
+      title: "Monthly Family Meetings",
+      note: "Second Sunday of every month on Zoom. All family members are welcome.",
       href: "/meetings",
       action: { label: "Join the meeting", href: null },
     },
     {
       label: "$25 · Order by June 18, 2027",
-      title: "One Family. One Favorite Shirt.",
-      note: "Plum with brass print, youth small through adult 4XL. Pick up Friday at the hospitality suite.",
+      title: "Reunion T-Shirts",
+      note: "Youth and adult sizes. Order by June 18 to guarantee your size.",
       href: "/reunion#tshirts",
       action: { label: "Order shirts", href: "/reunion#tshirts" },
     },
   ],
 
   closing: {
-    label: "Family news",
-    headline: "Denise passed the bar. Josiah arrived. RaySharpe is gone.",
-    sub: "Everything that happened to us since the last time we were all in a room together.",
+    headline: "Family News",
+    sub: "Birthdays, graduations, new babies and remembrances, shared by family members.",
     actions: [
-      { label: "All Announcements", href: "/news", variant: "secondary" },
-      { label: "Submit News", href: "/news" },
+      { label: "Read Announcements", href: "/news", variant: "secondary" },
+      { label: "Share Your News", href: "/news" },
     ],
   },
 };
